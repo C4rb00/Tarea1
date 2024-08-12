@@ -18,22 +18,29 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+# Librerías necesarias
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from IPython.display import display
 import warnings
 warnings.filterwarnings('ignore')
 olympics_url = "C:/Users/acarb/Documents/vis/events.csv"
-md2016 = pd.read_csv(olympics_url, usecols=['Sex', 'Age', 'Weight','Team','Year','Sport','Medal']).loc[olympics['Year']==2016]
+ol= pd.read_csv(olympics_url, usecols=['Sex', 'Age', 'Height', 'Weight','Team','Year','Sport','Medal'])
+md2016 = ol.loc[ol['Year']==2016]
+md2016 =  md2016[md2016['Medal'].notna()]
+md2016.head()
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn[1], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
-[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+Cell [1;32mIn[1], line 3[0m
+[0;32m      1[0m [38;5;66;03m# Librerías necesarias[39;00m
+[1;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
+[0;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
 
 [1;31mModuleNotFoundError[0m: No module named 'pandas'
 

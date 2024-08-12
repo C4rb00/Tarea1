@@ -1,11 +1,4 @@
-# Welcome to your Jupyter Book
-
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
-
+Trabajaremos con el conjunto de datos de 120 años de historia olímpica adquirido por Randi Griffin en [Randi-Griffin](https://www.sports-reference.com/)
+ y puesto a disposición en [athlete_events](https://raw.githubusercontent.com/lihkirun/AppliedStatisticMS/main/DataVisualizationRPython/Lectures/Python/PythonDataSets/athlete_events.csv). - Consiste en identificar los cinco deportes más importantes según el mayor número de medallas otorgadas en el año 2016.
 ```{tableofcontents}
 ```
